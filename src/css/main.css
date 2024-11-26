@@ -50,13 +50,15 @@ ul {
 .burger {
   pointer-events: none;
   opacity: 0;
-  position: fixed;
-  top: 20;
-  right: 16;
-  z-index: 1;
+  position: absolute;
 }
 
 .menu {
+  position: fixed;
+  top: 100;
+  left: 16;
+
+  pointer-events: none;
   opacity: 0;
 }
 
@@ -65,16 +67,12 @@ ul {
   pointer-events: auto;
 }
 
-@media (max-width: 680px) {
-  .menu {
-    position: fixed;
-    top: 100;
-    left: 16;
-  }
-
+@media (max-width: 700px) {
   .burger {
     pointer-events: auto;
     opacity: 1;
+    position: sticky;
+    right: 16px;
   }
 
   .flex-nav a {
