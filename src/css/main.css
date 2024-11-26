@@ -15,3 +15,70 @@ img,
 video {
   display: block;
 }
+
+header {
+  margin: 0 32px;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  margin: 0 32px;
+}
+
+.flex-nav {
+  display: flex;
+}
+
+a {
+  margin-left: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.burger {
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  top: 20;
+  right: 16;
+  z-index: 1;
+}
+
+.menu {
+  opacity: 0;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 680px) {
+  .menu {
+    position: fixed;
+    top: 100;
+    left: 16;
+  }
+
+  .burger {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .flex-nav a {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
